@@ -1,5 +1,3 @@
-import "./globals.css";
-
 import { Providers } from "./GlobalRedux/provider";
 
 export const metadata = {
