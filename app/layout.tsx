@@ -19,7 +19,6 @@ export default function RootLayout({
       <body>
         <Navigation />
         <Providers>{children}</Providers>
-        
       </body>
     </html>
   );
