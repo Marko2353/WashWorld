@@ -21,7 +21,7 @@ export default function Home() {
       <button className={styles.button} onClick={() => dispath(decrement())}>
         decrement
       </button>
-      <button className={styles.button} onClick={()=>dispath(incrementByAmount(2))}>incrementByAmount</button>
+      <button className={styles.button} onClick={()=>dispath(incrementByAmount())}>incrementByAmount</button>
     </main>
   );
 }
