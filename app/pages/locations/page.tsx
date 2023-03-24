@@ -1,7 +1,9 @@
+import Programs from "@/app/components/Programs/Programs";
+
 export default function Locations() {
   return (
-    <main>
-      <span>Hello</span>
-    </main>
+    <section>
+      <Programs />
+    </section>
   );
 }
