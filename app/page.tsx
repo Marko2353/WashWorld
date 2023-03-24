@@ -14,8 +14,10 @@ export default function Home() {
 
   return (
     <main>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <span>{count}</span>
+      <button className="bg-gray-500" onClick={() => dispatch(increment())}>
+        Increment
+      </button>
+      <span className="font-bold">{count}</span>
       <button onClick={() => dispatch(decrement())}>Decrement</button>
       <button onClick={() => dispatch(incrementByAmount(2))}>
         Increment by 2
