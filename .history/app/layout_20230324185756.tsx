@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         <Providers>{children}</Providers>
-        
+        <LocationCard></LocationCard>
       </body>
     </html>
   );

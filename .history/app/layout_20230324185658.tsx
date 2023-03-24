@@ -2,7 +2,6 @@ import "./index.css";
 
 import { Providers } from "./GlobalRedux/provider";
 import Navigation from "./components/Navigation/Navigation";
-import LocationCard from "./components/LocationCard/LocationCard";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,7 +18,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         <Providers>{children}</Providers>
-        
+        Locations
       </body>
     </html>
   );
