@@ -1,4 +1,4 @@
-import Locations from "./locations/page";
+import Locations from "./pages/locations/page";
 
 export default function Home() {
   return (
