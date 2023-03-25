@@ -4,6 +4,6 @@
 
 @layer components {
   .program-btn {
-    @apply w-1;
+    @apply flex justify-between w-96 p-4 border-solid border-black text-left text-xl;
   }
 }
