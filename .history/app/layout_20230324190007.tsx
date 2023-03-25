@@ -18,10 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation />
-        <LocationCard />
-       
+        <Providers>{children}</Providers>
+        <LocationCard></LocationCard>
       </body>
     </html>
   );
 }
-//<Providers>{children}</Providers>

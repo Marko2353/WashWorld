@@ -18,8 +18,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation />
-        <LocationCard />
-       
+        
+        <LocationCard></LocationCard>
       </body>
     </html>
   );
