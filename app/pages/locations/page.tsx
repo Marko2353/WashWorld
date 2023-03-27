@@ -25,6 +25,6 @@ function Location({ location }: any) {
   const { id, name, status } = location || {};
 
   return (
-    <LocationCard name={name} status={status} link={`/pages/locations/${id}`} />
+    <LocationCard name={name} status={status} url={`/pages/locations/${id}`} />
   );
 }
