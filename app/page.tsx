@@ -4,7 +4,7 @@ import Temporary from "./pages/locations/[id]/page";
 export default function Home() {
   return (
     <main>
-      <Temporary />
+      <Locations />
     </main>
   );
 }

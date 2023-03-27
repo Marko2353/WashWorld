@@ -4,7 +4,7 @@ import Programs from "@/app/components/Programs/Programs";
 
 export default function Temporary() {
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center px-6">
       <div className="max-w-7xl">
         <h2 className="text-3xl font-bold mb-2  mt-14">Some text here</h2>
         <p className="text-base w-2/3 mb-14">
