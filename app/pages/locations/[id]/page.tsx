@@ -2,7 +2,20 @@ import BtnStartWash from "@/app/components/BtnStartWash/BtnStartWash";
 import ProgramDetails from "@/app/components/ProgramDetails/ProgramDetails";
 import Programs from "@/app/components/Programs/Programs";
 
-export default function Temporary() {
+async function getLocationData(locationId: string) {
+  const res = await fetch(
+    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/:${locationId}`,
+    {
+      next: { revalidate: 10 },
+    }
+  );
+  const data = await res.json();
+  return data;
+}
+
+export default async function LocationPage({ params }: any) {
+  const locationData = await getLocationData(params.id);
+
   return (
     <section className="flex flex-col items-center px-6">
       <div className="max-w-7xl">
