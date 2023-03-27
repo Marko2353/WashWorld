@@ -13,10 +13,12 @@ export default async function Locations() {
   const locations = await getLocations();
 
   return (
-    <section>
-      {locations?.map((location) => {
-        return <Location key={location.id} location={location} />;
-      })}
+    <section className="flex flex-wrap justify-center px-6">
+      <div className="flex flex-wrap max-w-7xl">
+        {locations?.map((location) => {
+          return <Location key={location.id} location={location} />;
+        })}
+      </div>
     </section>
   );
 }

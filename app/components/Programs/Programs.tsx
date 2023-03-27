@@ -1,16 +1,23 @@
 import * as Unicons from "@iconscout/react-unicons";
 
-export default function Programs() {
+async function getPrograms() {
+  const res = await fetch(
+    "https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/products/:lpn"
+  );
+  const data = await res.json();
+  return data?.response.products as any[];
+}
+
+export default async function Programs() {
+  const programs = await getPrograms();
+
   return (
     <div className="flex flex-col w-fit divide-y-1 border-1 border-black border-solid">
-      <div role={"button"} className="program-btn">
-        <span className="flex items-center">
-          <Unicons.UilCircle className=" mr-4" />
-          All Inclusive
-        </span>{" "}
-        <span>DKK 229/month</span>
-      </div>
-      <div role={"button"} className="program-btn">
+      {programs?.map((program) => {
+        return <Program key={program.productid} program={program} />;
+      })}
+
+      {/* <div role={"button"} className="program-btn">
         <span className="flex items-center">
           <Unicons.UilCircle className=" mr-4" />
           Premium Plus
@@ -37,7 +44,21 @@ export default function Programs() {
           Basic
         </span>{" "}
         <span>DKK 69/month</span>
-      </div>
+      </div> */}
+    </div>
+  );
+}
+
+function Program({ program }: any) {
+  const { id, name, price } = program || {};
+
+  return (
+    <div key={id} role={"button"} className="program-btn">
+      <span className="flex items-center">
+        <Unicons.UilCircle className=" mr-4" />
+        {name}
+      </span>{" "}
+      <span>DKK {price}/month</span>
     </div>
   );
 }
