@@ -25,12 +25,13 @@ function Program({ program }: any) {
   const { id, name, price } = program || {};
 
   return (
-    <div key={id} role={"button"} className="program-btn hover:bg-gray-200">
-  <span className="flex items-center">
-    <Unicons.UilCircle className="mr-4" />
-    {name}
-  </span>{" "}
-  <span>DKK {price}/month</span>
-</div>
+    <div key={id} role="button" className="program-btn hover:bg-gray-200">
+      <span className="flex items-center">
+        <CircleCheckIcon className="mr-4" />
+        {name}
+      </span>{" "}
+      <span>DKK {price}/month</span>
+    </div>
   );
+  
 }

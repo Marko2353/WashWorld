@@ -1,7 +1,7 @@
 import BtnStartWash from "@/app/components/BtnStartWash/BtnStartWash";
 import ProgramDetails from "@/app/components/ProgramDetails/ProgramDetails";
 import Programs from "@/app/components/Programs/Programs";
-
+import TextField from './TextField';
 export default function Temporary() {
   return (
     <section className="flex flex-col items-center px-6">
@@ -25,16 +25,14 @@ export default function Temporary() {
             </p>
             <div>
               <span>DK</span>
-              <div className="flex items-center w-full px-4 py-2 border-2 border-gray-400 rounded-lg">
-      <div className="flex items-center justify-center w-6 h-6 px-4 mr-2 font-bold text-white bg-blue-500">
-        DK
-      </div>
-      <input
-        value="BV99123"
-        className="w-full outline-none"
+              <div className="container mx-auto">
+      <TextField
+        label="Nombre completo"
+        placeholder="Escribe tu nombre completo aquí"
+        value="21"
+        
       />
     </div>
-
             </div>
           </div>
 

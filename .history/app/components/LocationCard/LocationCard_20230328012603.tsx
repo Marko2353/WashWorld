@@ -9,7 +9,7 @@ export default function LocationCard({ name, status, url }: any) {
         <h2 className="mb-2 text-xl font-bold">{name}</h2>
         <p className="text-base text-gray-700">{name}</p>
        
-        <Link href={`https://www.google.com/maps/place/${name}`} target="_blank" className="text-base underline hover:text-green-700">
+        <Link href="https://www.google.com/maps/place/´{palce}´" className="text-base underline hover:text-green-700">
           Vis på kort
         </Link>
         <p className="text-base font-bold text-green-500">

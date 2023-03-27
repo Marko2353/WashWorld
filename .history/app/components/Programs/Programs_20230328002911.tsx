@@ -21,6 +21,12 @@ export default async function Programs() {
   );
 }
 
+const [isChecked, setIsChecked] = useState(false);
+
+const handleCheck = () => {
+  setIsChecked(!isChecked);
+};
+
 function Program({ program }: any) {
   const { id, name, price } = program || {};
 
@@ -34,3 +40,7 @@ function Program({ program }: any) {
 </div>
   );
 }
+function useState(arg0: boolean): [any, any] {
+  throw new Error("Function not implemented.");
+}
+

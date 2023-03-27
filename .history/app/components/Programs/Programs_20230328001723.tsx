@@ -1,4 +1,5 @@
 import * as Unicons from "@iconscout/react-unicons";
+import { useState } from "react";
 
 async function getPrograms() {
   const res = await fetch(
@@ -23,14 +24,30 @@ export default async function Programs() {
 
 function Program({ program }: any) {
   const { id, name, price } = program || {};
-
-  return (
-    <div key={id} role={"button"} className="program-btn hover:bg-gray-200">
-  <span className="flex items-center">
-    <Unicons.UilCircle className="mr-4" />
-    {name}
-  </span>{" "}
-  <span>DKK {price}/month</span>
-</div>
-  );
-}
+  function ProgramButton({ id, name, price }) {
+    const [selected, setSelected] = useState(false);
+  
+    const handleClick = () => {
+      setSelected(!selected);
+    };
+  
+    return (
+      <div
+        key={id}
+        role={"button"}
+        className={`program-btn ${selected ? "bg-gray-200" : ""}`}
+        onClick={handleClick}
+      >
+        <span className="flex items-center">
+          {selected ? (
+            <Unicons.UilCheckCircle className="mr-4" />
+          ) : (
+            <Unicons.UilCircle className="mr-4" />
+          )}
+          {name}
+        </span>{" "}
+        <span>DKK {price}/month</span>
+      </div>
+    );
+  }
+  

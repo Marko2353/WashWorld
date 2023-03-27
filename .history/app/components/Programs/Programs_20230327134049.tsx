@@ -13,7 +13,7 @@ export default async function Programs() {
   const programs = await getPrograms();
 
   return (
-    <div className="flex flex-col border-black border-solid w-fit divide-y-1 border-1">
+    <div className="flex flex-col w-fit divide-y-1 border-1 border-black border-solid">
       {programs?.reverse().map((program) => {
         return <Program key={program.productid} program={program} />;
       })}
@@ -25,12 +25,12 @@ function Program({ program }: any) {
   const { id, name, price } = program || {};
 
   return (
-    <div key={id} role={"button"} className="program-btn hover:bg-gray-200">
-  <span className="flex items-center">
-    <Unicons.UilCircle className="mr-4" />
-    {name}
-  </span>{" "}
-  <span>DKK {price}/month</span>
-</div>
+    <div key={id} role={"button"} className="program-btn">
+      <span className="flex items-center">
+        <Unicons.UilCircle className=" mr-4" />
+        {name}
+      </span>{" "}
+      <span>DKK {price}/month</span>
+    </div>
   );
 }

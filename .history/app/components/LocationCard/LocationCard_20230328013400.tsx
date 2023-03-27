@@ -2,7 +2,7 @@ import Link from "next/link";
 import place from "../img/wash-place.png";
 export default function LocationCard({ name, status, url }: any) {
   return (
-    
+    {status !="available" :(
     <div className="max-w-sm mx-2 my-4 overflow-hidden shadow-lg bg-grey">
       <img src={place} alt="img" className="object-cover w-full h-48" />
       <div className="px-4 py-2">
@@ -25,5 +25,6 @@ export default function LocationCard({ name, status, url }: any) {
         </Link>
       </div>
     </div>
+    ):(<div>"hi"</div>)}
   );
 }

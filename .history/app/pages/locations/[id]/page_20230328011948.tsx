@@ -26,15 +26,15 @@ export default function Temporary() {
             <div>
               <span>DK</span>
               <div className="flex items-center w-full px-4 py-2 border-2 border-gray-400 rounded-lg">
-      <div className="flex items-center justify-center w-6 h-6 px-4 mr-2 font-bold text-white bg-blue-500">
+      <div className="flex items-center justify-center w-6 h-6 mr-2 font-bold text-white bg-blue-500 rounded">
         DK
       </div>
       <input
-        value="BV99123"
+        placeholder={"BV99123"}
         className="w-full outline-none"
       />
     </div>
-
+              <span>BV99123</span>
             </div>
           </div>
 

@@ -25,16 +25,21 @@ export default function Temporary() {
             </p>
             <div>
               <span>DK</span>
-              <div className="flex items-center w-full px-4 py-2 border-2 border-gray-400 rounded-lg">
-      <div className="flex items-center justify-center w-6 h-6 px-4 mr-2 font-bold text-white bg-blue-500">
-        DK
-      </div>
-      <input
-        value="BV99123"
-        className="w-full outline-none"
-      />
-    </div>
+              <div>
+  <label
+    for="UserEmail"
+    class="block text-xs font-medium text-gray-700 dark:text-gray-200"
+  >
+    Email
+  </label>
 
+  <input
+    type="email"
+    id="UserEmail"
+    placeholder="john@rhcp.com"
+    class="mt-1 w-full rounded-md border-gray-200 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-white sm:text-sm"
+  />
+</div>
             </div>
           </div>
 

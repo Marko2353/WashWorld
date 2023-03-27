@@ -21,6 +21,12 @@ export default async function Programs() {
   );
 }
 
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheck = () => {
+    setIsChecked(!isChecked);
+  };
+
 function Program({ program }: any) {
   const { id, name, price } = program || {};
 

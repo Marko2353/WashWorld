@@ -30,11 +30,10 @@ export default function Temporary() {
         DK
       </div>
       <input
-        value="BV99123"
+
         className="w-full outline-none"
       />
     </div>
-
             </div>
           </div>
 
