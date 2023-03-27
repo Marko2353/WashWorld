@@ -3,8 +3,8 @@ import Temporary from "./pages/locations/[id]/page";
 
 export default function Home() {
   return (
-    <main>
-      <Locations />
-    </main>
+    <div>
+      <h1>hello</h1>
+    </div>
   );
 }
