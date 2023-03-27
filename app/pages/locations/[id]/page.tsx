@@ -2,17 +2,25 @@ import BtnStartWash from "@/app/components/BtnStartWash/BtnStartWash";
 import ProgramDetails from "@/app/components/ProgramDetails/ProgramDetails";
 import Programs from "@/app/components/Programs/Programs";
 
-export default function Temporary() {
+async function getLocationData(locationId: string) {
+  const res = await fetch(
+    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/:${locationId}`,
+    {
+      next: { revalidate: 10 },
+    }
+  );
+  const data = await res.json();
+  return data;
+}
+
+export default async function LocationPage({ params }: any) {
+  const locationData = await getLocationData(params.id);
+
   return (
     <section className="flex flex-col items-center px-6">
       <div className="max-w-7xl">
         <h2 className="text-3xl font-bold mb-2  mt-14">Some text here</h2>
-        <p className="text-base w-2/3 mb-14">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
-          vel maxime, illum odit a commodi ad et impedit voluptatibus sed, est,
-          quas aliquam repudiandae! Recusandae maxime rerum nesciunt quibusdam
-          doloribus.
-        </p>
+        <p className="text-base w-2/3 mb-14">{locationData.description}</p>
       </div>
       <div className="flex justify-between max-w-7xl w-full">
         <div>
