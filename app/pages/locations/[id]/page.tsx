@@ -6,7 +6,7 @@ export default function Temporary() {
   return (
     <section className="flex flex-col items-center">
       <div className="max-w-7xl">
-        <h2 className="text-3xl font-bold mb-2">Some text here</h2>
+        <h2 className="text-3xl font-bold mb-2  mt-14">Some text here</h2>
         <p className="text-base w-2/3 mb-14">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
           vel maxime, illum odit a commodi ad et impedit voluptatibus sed, est,
@@ -37,7 +37,7 @@ export default function Temporary() {
             </p>
           </div>
 
-          <div>
+          <div className="mb-14">
             <span className="text-lg font-bold">3. Choose your program.</span>
             <p className="text-sm mt-2 mb-4  w-96">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
