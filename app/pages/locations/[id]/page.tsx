@@ -25,7 +25,7 @@ export default function Temporary() {
             </p>
             <div>
               <span>DK</span>
-              <span>AB12345</span>
+              <span>BV99123</span>
             </div>
           </div>
 
