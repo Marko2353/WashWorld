@@ -4,22 +4,40 @@ import Programs from "@/app/components/Programs/Programs";
 
 async function getLocationData(locationId: string) {
   const res = await fetch(
-    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/:${locationId}`,
+    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/${locationId}`,
     {
       next: { revalidate: 10 },
     }
   );
   const data = await res.json();
-  return data;
+  return data.response;
+}
+
+async function getLocationName() {
+  const res = await fetch(
+    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/locations`
+  );
+  const data = await res.json();
+  return data.response.locations;
 }
 
 export default async function LocationPage({ params }: any) {
   const locationData = await getLocationData(params.id);
+  const locationName = await getLocationName();
+  console.log(locationName);
 
   return (
     <section className="flex flex-col items-center px-6">
       <div className="max-w-7xl">
-        <h2 className="text-3xl font-bold mb-2  mt-14">Some text here</h2>
+        {locationName?.map((locationName: any) => {
+          return locationData.location === locationName.id ? (
+            <h2 className="text-3xl font-bold mb-2  mt-14">
+              {locationName.name}
+            </h2>
+          ) : (
+            ""
+          );
+        })}
         <p className="text-base w-2/3 mb-14">{locationData.description}</p>
       </div>
       <div className="flex justify-between max-w-7xl w-full">
@@ -33,7 +51,7 @@ export default async function LocationPage({ params }: any) {
             </p>
             <div>
               <span>DK</span>
-              <span>BV99123</span>
+              <span>{locationData.lpn}</span>
             </div>
           </div>
 
