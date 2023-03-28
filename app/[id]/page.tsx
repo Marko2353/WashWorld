@@ -1,7 +1,6 @@
 import BtnStartWash from "@/app/components/BtnStartWash/BtnStartWash";
 import ProgramDetails from "@/app/components/ProgramDetails/ProgramDetails";
 import Programs from "@/app/components/Programs/Programs";
-import Link from "next/link";
 
 async function getLocationData(locationId: number) {
   const res = await fetch(

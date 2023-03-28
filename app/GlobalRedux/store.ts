@@ -2,10 +2,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import selector from "./Features/selection/selectionSlice";
+import countdownReducer from "./Features/counter/counterSlice";
 
 export const store = configureStore({
   reducer: {
     classes: selector,
+    countdown: countdownReducer,
   },
 });
 
