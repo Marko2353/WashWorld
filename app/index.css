@@ -6,4 +6,8 @@
   .program-btn {
     @apply flex justify-between w-96 p-4 border-solid border-black text-left text-xl;
   }
+
+  .selected {
+    @apply font-bold;
+  }
 }
