@@ -1,6 +1,4 @@
-
 import * as Unicons from "@iconscout/react-unicons";
-
 
 async function getPrograms() {
   const res = await fetch(
@@ -22,6 +20,12 @@ export default async function Programs() {
     </div>
   );
 }
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheck = () => {
+    setIsChecked(!isChecked);
+  };
 
 function Program({ program }: any) {
   const { id, name, price } = program || {};

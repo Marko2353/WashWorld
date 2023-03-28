@@ -1,6 +1,4 @@
-
 import * as Unicons from "@iconscout/react-unicons";
-
 
 async function getPrograms() {
   const res = await fetch(
@@ -15,7 +13,7 @@ export default async function Programs() {
   const programs = await getPrograms();
 
   return (
-    <div className="flex flex-col border-black border-solid w-fit divide-y-1 border-1">
+    <div className="flex flex-col w-fit divide-y-1 border-1 border-black border-solid">
       {programs?.reverse().map((program) => {
         return <Program key={program.productid} program={program} />;
       })}

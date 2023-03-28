@@ -1,6 +1,4 @@
-
 import * as Unicons from "@iconscout/react-unicons";
-
 
 async function getPrograms() {
   const res = await fetch(
