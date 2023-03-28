@@ -73,11 +73,9 @@ export default async function LocationPage({ params }: any) {
 
         <div>
           <ProgramDetails />
-         
+          <Link>
           <BtnStartWash />
-       
-          
-        
+          </Link>
         </div>
       </div>
     </section>

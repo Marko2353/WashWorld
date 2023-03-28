@@ -73,10 +73,8 @@ export default async function LocationPage({ params }: any) {
 
         <div>
           <ProgramDetails />
-         
-          <BtnStartWash />
-       
           
+          <BtnStartWash />
         
         </div>
       </div>
