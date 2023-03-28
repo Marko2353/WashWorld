@@ -24,7 +24,6 @@ async function getLocationName() {
 export default async function LocationPage({ params }: any) {
   const locationData = await getLocationData(params.id);
   const locationName = await getLocationName();
-  console.log(locationName);
 
   return (
     <section className="flex flex-col items-center px-6">
