@@ -1,6 +1,5 @@
-
 import * as Unicons from "@iconscout/react-unicons";
-
+import { useState } from "react";
 
 async function getPrograms() {
   const res = await fetch(
@@ -25,10 +24,13 @@ export default async function Programs() {
 
 function Program({ program }: any) {
   const { id, name, price } = program || {};
+  const [valor, setValor] = useState(0);
+  
 
   return (
     <div key={id} role={"button"} className="program-btn hover:bg-gray-200">
   <span className="flex items-center">
+  {params.id == 1 ? "pepe" : params.id == 2 ? "pipo" : ""}
     <Unicons.UilCircle className="mr-4" />
     {name}
   </span>{" "}

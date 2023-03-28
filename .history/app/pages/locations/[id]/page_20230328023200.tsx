@@ -55,7 +55,7 @@ export default async function LocationPage({ params }: any) {
           <div className="mb-16">
             <span className="text-lg font-bold">2. Location</span>
             <p className="mt-2 text-sm w-96">
-            {params.id == 1 ? "Dynamovej 10" : params.id == 2 ? "Dynamovej 22" : params.id == 3 ? "Aalborg hovedvej 19" : "Køgevej 198"}
+            {params.id == 1 ? "Dynamovej 10" : params.id == 2 ? "pipo" : params.id == 3 ? "pipo"}
 </p>
           </div>
 

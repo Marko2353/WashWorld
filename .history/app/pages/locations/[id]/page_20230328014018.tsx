@@ -2,9 +2,9 @@ import BtnStartWash from "@/app/components/BtnStartWash/BtnStartWash";
 import ProgramDetails from "@/app/components/ProgramDetails/ProgramDetails";
 import Programs from "@/app/components/Programs/Programs";
 
-async function getLocationData(locationId: number) {
+async function getLocationData(locationId: string) {
   const res = await fetch(
-    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/${locationId}`,
+    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/:${locationId}`,
     {
       next: { revalidate: 10 },
     }
@@ -14,12 +14,12 @@ async function getLocationData(locationId: number) {
 }
 
 export default async function LocationPage({ params }: any) {
-
   const locationData = await getLocationData(params.id);
 
   return (
     <section className="flex flex-col items-center px-6">
       <div className="max-w-7xl">
+<<<<<<< HEAD
         <h2 className="mb-2 text-3xl font-bold mt-14">Some text here</h2>
         <p className="w-2/3 text-base mb-14">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
@@ -27,6 +27,10 @@ export default async function LocationPage({ params }: any) {
           quas aliquam repudiandae! Recusandae maxime rerum nesciunt quibusdam
           doloribus.
         </p>
+=======
+        <h2 className="text-3xl font-bold mb-2  mt-14">Some text here</h2>
+        <p className="text-base w-2/3 mb-14">{locationData.description}</p>
+>>>>>>> f143e92d4da9c4b07bee09e90f1147f47edad304
       </div>
       <div className="flex justify-between w-full max-w-7xl">
         <div>
@@ -55,8 +59,9 @@ export default async function LocationPage({ params }: any) {
           <div className="mb-16">
             <span className="text-lg font-bold">2. Location</span>
             <p className="mt-2 text-sm w-96">
-            {params.id == 1 ? "Dynamovej 10" : params.id == 2 ? "Dynamovej 22" : params.id == 3 ? "Aalborg hovedvej 19" : "Køgevej 198"}
-</p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+              accusamus nisi quasi ut voluptate amet odit eos facere autem modi?
+            </p>
           </div>
 
           <div className="mb-14">

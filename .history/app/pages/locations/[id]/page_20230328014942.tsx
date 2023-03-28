@@ -4,7 +4,7 @@ import Programs from "@/app/components/Programs/Programs";
 
 async function getLocationData(locationId: number) {
   const res = await fetch(
-    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/${locationId}`,
+    `https://b46f027d-3a5f-4de6-9075-5e861759e531.mock.pstmn.io/cam/:${locationId}`,
     {
       next: { revalidate: 10 },
     }
@@ -14,7 +14,6 @@ async function getLocationData(locationId: number) {
 }
 
 export default async function LocationPage({ params }: any) {
-
   const locationData = await getLocationData(params.id);
 
   return (
@@ -55,8 +54,9 @@ export default async function LocationPage({ params }: any) {
           <div className="mb-16">
             <span className="text-lg font-bold">2. Location</span>
             <p className="mt-2 text-sm w-96">
-            {params.id == 1 ? "Dynamovej 10" : params.id == 2 ? "Dynamovej 22" : params.id == 3 ? "Aalborg hovedvej 19" : "Køgevej 198"}
-</p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+              accusamus nisi quasi ut voluptate amet odit eos facere autem modi?
+            </p>
           </div>
 
           <div className="mb-14">
